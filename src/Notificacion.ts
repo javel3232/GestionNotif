@@ -7,5 +7,9 @@ export abstract class Notificacion {
     this.plataforma = plataforma;
   }
 
+  cambiarPlataforma(plataforma: Plataforma): void {
+    this.plataforma = plataforma;
+  }
+
   abstract mostrar(mensaje: string): void;
 }

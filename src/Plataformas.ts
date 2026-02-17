@@ -1,19 +1,19 @@
 import { Plataforma } from './Plataforma';
 
 export class Escritorio implements Plataforma {
-  renderizar(tipo: string, mensaje: string): void {
-    console.log(`[ESCRITORIO] ${tipo.toUpperCase()}: ${mensaje}`);
+  renderizar(contenido: string): void {
+    console.log(`[ESCRITORIO] ${contenido}`);
   }
 }
 
 export class Movil implements Plataforma {
-  renderizar(tipo: string, mensaje: string): void {
-    console.log(`[MÓVIL] ${tipo}: ${mensaje}`);
+  renderizar(contenido: string): void {
+    console.log(`[MÓVIL] ${contenido}`);
   }
 }
 
 export class Web implements Plataforma {
-  renderizar(tipo: string, mensaje: string): void {
-    console.log(`[WEB] <${tipo}>${mensaje}</${tipo}>`);
+  renderizar(contenido: string): void {
+    console.log(`[WEB] ${contenido}`);
   }
 }

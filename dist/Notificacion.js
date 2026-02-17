@@ -5,5 +5,8 @@ class Notificacion {
     constructor(plataforma) {
         this.plataforma = plataforma;
     }
+    cambiarPlataforma(plataforma) {
+        this.plataforma = plataforma;
+    }
 }
 exports.Notificacion = Notificacion;
