@@ -14,12 +14,12 @@ export class Alerta extends Notificacion {
 
 export class Advertencia extends Notificacion {
   mostrar(mensaje: string): void {
-    this.plataforma.renderizar(`ADVERTENCIA: ${mensaje}`);
+    this.plataforma.renderizar(`⚠ ADVERTENCIA: ${mensaje}`);
   }
 }
 
 export class Confirmacion extends Notificacion {
   mostrar(mensaje: string): void {
-    this.plataforma.renderizar(`CONFIRMACIÓN: ${mensaje}`);
+    this.plataforma.renderizar(`✓ CONFIRMACIÓN: ${mensaje}`);
   }
 }

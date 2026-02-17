@@ -2,6 +2,8 @@
 
 Sistema de gestión de notificaciones multiplataforma implementando el patrón Bridge.
 
+
+
 ## Instalación
 
 ```bash

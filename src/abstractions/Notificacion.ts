@@ -1,4 +1,4 @@
-import { Plataforma } from './Plataforma';
+import { Plataforma } from '../interfaces/Plataforma';
 
 export abstract class Notificacion {
   protected plataforma: Plataforma;

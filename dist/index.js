@@ -1,19 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Plataformas_1 = require("./Plataformas");
-const TiposNotificacion_1 = require("./TiposNotificacion");
-const alertaMovil = new TiposNotificacion_1.Alerta(new Plataformas_1.Movil());
-alertaMovil.mostrar('Batería baja');
-const mensajeEscritorio = new TiposNotificacion_1.Mensaje(new Plataformas_1.Escritorio());
-mensajeEscritorio.mostrar('Tienes un nuevo mensaje');
-const advertenciaWeb = new TiposNotificacion_1.Advertencia(new Plataformas_1.Web());
-advertenciaWeb.mostrar('Sesión a punto de expirar');
-const confirmacionMovil = new TiposNotificacion_1.Confirmacion(new Plataformas_1.Movil());
-confirmacionMovil.mostrar('Operación completada exitosamente');
-// Cambio dinámico de plataforma
-const notificacion = new TiposNotificacion_1.Alerta(new Plataformas_1.Escritorio());
-notificacion.mostrar('Alerta en escritorio');
-notificacion.cambiarPlataforma(new Plataformas_1.Web());
-notificacion.mostrar('Misma alerta ahora en web');
-notificacion.cambiarPlataforma(new Plataformas_1.Movil());
-notificacion.mostrar('Misma alerta ahora en móvil');
+exports.Web = exports.Movil = exports.Escritorio = exports.Confirmacion = exports.Advertencia = exports.Alerta = exports.Mensaje = exports.Notificacion = void 0;
+// Abstracciones
+var Notificacion_1 = require("./abstractions/Notificacion");
+Object.defineProperty(exports, "Notificacion", { enumerable: true, get: function () { return Notificacion_1.Notificacion; } });
+var TiposNotificacion_1 = require("./abstractions/TiposNotificacion");
+Object.defineProperty(exports, "Mensaje", { enumerable: true, get: function () { return TiposNotificacion_1.Mensaje; } });
+Object.defineProperty(exports, "Alerta", { enumerable: true, get: function () { return TiposNotificacion_1.Alerta; } });
+Object.defineProperty(exports, "Advertencia", { enumerable: true, get: function () { return TiposNotificacion_1.Advertencia; } });
+Object.defineProperty(exports, "Confirmacion", { enumerable: true, get: function () { return TiposNotificacion_1.Confirmacion; } });
+// Implementaciones
+var Plataformas_1 = require("./implementations/Plataformas");
+Object.defineProperty(exports, "Escritorio", { enumerable: true, get: function () { return Plataformas_1.Escritorio; } });
+Object.defineProperty(exports, "Movil", { enumerable: true, get: function () { return Plataformas_1.Movil; } });
+Object.defineProperty(exports, "Web", { enumerable: true, get: function () { return Plataformas_1.Web; } });

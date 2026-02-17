@@ -1,4 +1,4 @@
-import { Plataforma } from './Plataforma';
+import { Plataforma } from '../interfaces/Plataforma';
 
 export class Escritorio implements Plataforma {
   renderizar(contenido: string): void {
