@@ -1,3 +1,8 @@
+# Diagrama de clases
+
+![Diagrama de Clases](https://drive.google.com/uc?export=view&id=1u_sqvpyoM4Js0HIwKl8F8YMbih7_amaE)
+
+
 # Arquitectura del Proyecto
 
 ## Estructura de Carpetas
